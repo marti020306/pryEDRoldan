@@ -16,5 +16,50 @@ namespace pryEDRoldan
         {
             InitializeComponent();
         }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "")
+            {
+                
+                txtNombre.Enabled = false;
+               
+            }
+            else
+            {
+               
+                txtNombre.Enabled = true;
+                
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                txtDeuda.Enabled = false;
+            }
+            else
+            {
+                txtDeuda.Enabled = true;
+            }
+        }
+
+        private void txtDeuda_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDeuda.Text == "")
+            {
+                btnGrabar.Enabled = false;
+            }
+            else
+            {
+                btnGrabar.Enabled = true;
+            }
+        }
     }
 }

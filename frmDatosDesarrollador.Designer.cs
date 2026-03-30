@@ -68,6 +68,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(140, 22);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblEdad
             // 
@@ -90,17 +91,21 @@
             // 
             // txtEdad
             // 
+            this.txtEdad.Enabled = false;
             this.txtEdad.Location = new System.Drawing.Point(176, 155);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(140, 22);
             this.txtEdad.TabIndex = 6;
+            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // txtdni
             // 
+            this.txtdni.Enabled = false;
             this.txtdni.Location = new System.Drawing.Point(176, 214);
             this.txtdni.Name = "txtdni";
             this.txtdni.Size = new System.Drawing.Size(140, 22);
             this.txtdni.TabIndex = 7;
+            this.txtdni.TextChanged += new System.EventHandler(this.txtdni_TextChanged);
             // 
             // lblTelefono
             // 
@@ -113,10 +118,12 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Enabled = false;
             this.txtTelefono.Location = new System.Drawing.Point(176, 270);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(140, 22);
             this.txtTelefono.TabIndex = 9;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // lblNacimiento
             // 
@@ -129,13 +136,16 @@
             // 
             // txtNacimiento
             // 
+            this.txtNacimiento.Enabled = false;
             this.txtNacimiento.Location = new System.Drawing.Point(176, 338);
             this.txtNacimiento.Name = "txtNacimiento";
             this.txtNacimiento.Size = new System.Drawing.Size(140, 22);
             this.txtNacimiento.TabIndex = 11;
+            this.txtNacimiento.TextChanged += new System.EventHandler(this.txtNacimiento_TextChanged);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Location = new System.Drawing.Point(32, 396);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -145,12 +155,14 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.Location = new System.Drawing.Point(167, 396);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnSalir
             // 
@@ -160,6 +172,7 @@
             this.btnSalir.TabIndex = 14;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmDatosDesarrollador
             // 
@@ -182,6 +195,7 @@
             this.Controls.Add(this.lbltitulo);
             this.Name = "frmDatosDesarrollador";
             this.Text = "Datos Desarrollador";
+            this.Load += new System.EventHandler(this.frmDatosDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

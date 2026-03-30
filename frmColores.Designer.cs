@@ -41,9 +41,11 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(197, 22);
             this.txtNombre.TabIndex = 0;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnListar
             // 
+            this.btnListar.Enabled = false;
             this.btnListar.Location = new System.Drawing.Point(30, 125);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(113, 23);
@@ -53,6 +55,7 @@
             // 
             // btnGrabar
             // 
+            this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(188, 125);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(133, 23);

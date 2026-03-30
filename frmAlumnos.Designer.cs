@@ -32,7 +32,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCarerra = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgbAlumnos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,7 @@
             // 
             // btnGrabar
             // 
+            this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(342, 208);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(137, 23);
@@ -78,12 +79,14 @@
             this.lblCarerra.TabIndex = 3;
             this.lblCarerra.Text = "Carrera";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(156, 98);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(323, 22);
+            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -91,6 +94,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(137, 22);
             this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // dgbAlumnos
             // 
@@ -129,11 +133,13 @@
             // 
             // cbxCarrera
             // 
+            this.cbxCarrera.Enabled = false;
             this.cbxCarrera.FormattingEnabled = true;
             this.cbxCarrera.Location = new System.Drawing.Point(342, 146);
             this.cbxCarrera.Name = "cbxCarrera";
             this.cbxCarrera.Size = new System.Drawing.Size(137, 24);
             this.cbxCarrera.TabIndex = 8;
+            this.cbxCarrera.SelectedIndexChanged += new System.EventHandler(this.cbxCarrera_SelectedIndexChanged);
             // 
             // frmAlumnos
             // 
@@ -143,7 +149,7 @@
             this.Controls.Add(this.cbxCarrera);
             this.Controls.Add(this.dgbAlumnos);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblCarerra);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
@@ -162,7 +168,7 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCarerra;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.DataGridView dgbAlumnos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

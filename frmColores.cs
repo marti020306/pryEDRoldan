@@ -26,5 +26,19 @@ namespace pryEDRoldan
         {
 
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnListar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnListar.Enabled = false;
+            }
+        }
     }
 }

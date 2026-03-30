@@ -16,5 +16,45 @@ namespace pryEDRoldan
         {
             InitializeComponent();
         }
+
+        private void frmEstructuraDatos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void datosDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosDesarrollador v = new frmDatosDesarrollador();
+            v.ShowDialog();
+        }
+
+        private void MesesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMeses frmMeses = new frmMeses();
+            frmMeses.ShowDialog();
+        }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColores frmColores = new frmColores();
+            frmColores.ShowDialog();
+        }
+
+        private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes frmClientes = new frmClientes();
+            frmClientes.ShowDialog();
+        }
+
+        private void AlumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos frmAlumnos = new frmAlumnos();
+            frmAlumnos.ShowDialog();
+        }
     }
 }
