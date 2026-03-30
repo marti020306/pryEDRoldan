@@ -38,26 +38,29 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(28, 66);
+            this.lblNombre.Location = new System.Drawing.Point(21, 54);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(142, 66);
+            this.txtNombre.Location = new System.Drawing.Point(106, 54);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(182, 22);
+            this.txtNombre.Size = new System.Drawing.Size(138, 20);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnListar
             // 
             this.btnListar.Enabled = false;
-            this.btnListar.Location = new System.Drawing.Point(31, 145);
+            this.btnListar.Location = new System.Drawing.Point(23, 118);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(126, 23);
+            this.btnListar.Size = new System.Drawing.Size(94, 19);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -65,9 +68,10 @@
             // btnGrabar
             // 
             this.btnGrabar.Enabled = false;
-            this.btnGrabar.Location = new System.Drawing.Point(192, 145);
+            this.btnGrabar.Location = new System.Drawing.Point(144, 118);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(132, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(99, 19);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -75,23 +79,25 @@
             // lstMeses
             // 
             this.lstMeses.FormattingEnabled = true;
-            this.lstMeses.ItemHeight = 16;
-            this.lstMeses.Location = new System.Drawing.Point(31, 224);
+            this.lstMeses.Location = new System.Drawing.Point(23, 182);
+            this.lstMeses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstMeses.Name = "lstMeses";
-            this.lstMeses.Size = new System.Drawing.Size(293, 148);
+            this.lstMeses.Size = new System.Drawing.Size(221, 121);
             this.lstMeses.TabIndex = 4;
             // 
             // frmMeses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 410);
+            this.ClientSize = new System.Drawing.Size(269, 333);
             this.Controls.Add(this.lstMeses);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMeses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meses";
             this.Load += new System.EventHandler(this.frmMeses_Load);
             this.ResumeLayout(false);

@@ -45,53 +45,59 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(34, 94);
+            this.lblNombre.Location = new System.Drawing.Point(26, 76);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(34, 43);
+            this.lblCodigo.Location = new System.Drawing.Point(26, 35);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(51, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Codigo";
             // 
             // lblDeuda
             // 
             this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Location = new System.Drawing.Point(34, 148);
+            this.lblDeuda.Location = new System.Drawing.Point(26, 120);
+            this.lblDeuda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(48, 16);
+            this.lblDeuda.Size = new System.Drawing.Size(39, 13);
             this.lblDeuda.TabIndex = 2;
             this.lblDeuda.Text = "Deuda";
             // 
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(178, 94);
+            this.txtNombre.Location = new System.Drawing.Point(134, 76);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(310, 22);
+            this.txtNombre.Size = new System.Drawing.Size(234, 20);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(362, 40);
+            this.txtCodigo.Location = new System.Drawing.Point(272, 32);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(124, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(94, 20);
             this.txtCodigo.TabIndex = 5;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnGrabar
             // 
             this.btnGrabar.Enabled = false;
-            this.btnGrabar.Location = new System.Drawing.Point(362, 207);
+            this.btnGrabar.Location = new System.Drawing.Point(272, 168);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(124, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(93, 19);
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -103,11 +109,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvClientes.Location = new System.Drawing.Point(37, 296);
+            this.dgvClientes.Location = new System.Drawing.Point(28, 240);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(424, 219);
+            this.dgvClientes.Size = new System.Drawing.Size(318, 178);
             this.dgvClientes.TabIndex = 8;
             // 
             // Column1
@@ -134,17 +141,18 @@
             // txtDeuda
             // 
             this.txtDeuda.Enabled = false;
-            this.txtDeuda.Location = new System.Drawing.Point(362, 142);
+            this.txtDeuda.Location = new System.Drawing.Point(272, 115);
+            this.txtDeuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(126, 22);
+            this.txtDeuda.Size = new System.Drawing.Size(96, 20);
             this.txtDeuda.TabIndex = 9;
             this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged);
             // 
             // frmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 567);
+            this.ClientSize = new System.Drawing.Size(392, 461);
             this.Controls.Add(this.txtDeuda);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnGrabar);
@@ -153,7 +161,9 @@
             this.Controls.Add(this.lblDeuda);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
