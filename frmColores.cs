@@ -40,5 +40,13 @@ namespace pryEDRoldan
                 btnListar.Enabled = false;
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El color " + txtNombre.Text + " se ha grabado correctamente");
+            clsArchivo x = new clsArchivo();
+            x.Grabar(txtNombre.Text);
+            txtNombre.Clear();
+        }
     }
 }
