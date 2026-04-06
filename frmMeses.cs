@@ -45,5 +45,13 @@ namespace pryEDRoldan
             }
 
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El mes " + txtNombre.Text + " se ha grabado correctamente");
+            clsArchivo x = new clsArchivo();
+            x.GrabarMeses(txtNombre.Text);
+            x.RecorrerMeses(lstMeses);
+        }
     }
 }

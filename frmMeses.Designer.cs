@@ -48,7 +48,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(106, 54);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(138, 20);
             this.txtNombre.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.btnListar.Enabled = false;
             this.btnListar.Location = new System.Drawing.Point(23, 118);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(94, 19);
             this.btnListar.TabIndex = 2;
@@ -69,18 +69,19 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(144, 118);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 19);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lstMeses
             // 
             this.lstMeses.FormattingEnabled = true;
             this.lstMeses.Location = new System.Drawing.Point(23, 182);
-            this.lstMeses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstMeses.Margin = new System.Windows.Forms.Padding(2);
             this.lstMeses.Name = "lstMeses";
             this.lstMeses.Size = new System.Drawing.Size(221, 121);
             this.lstMeses.TabIndex = 4;
@@ -95,7 +96,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMeses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meses";

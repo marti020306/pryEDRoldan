@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
+using System.Security.Cryptography.X509Certificates;
 
 namespace pryEDRoldan
 {
@@ -24,5 +26,57 @@ namespace pryEDRoldan
             AD.WriteLine(Dato);
             AD.Close();
         }
+
+        public void Recorrer(ListBox lstDatos)
+        {
+
+            lstDatos.Items.Clear();
+            string DatoLeido = "";
+            StreamReader AD = new StreamReader(NomArchivo);
+            DatoLeido = AD.ReadLine();
+            while (DatoLeido != null)
+            {
+                lstDatos.Items.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+            }
+            AD.Close();
+
+           
+
+
+        }
+
+        public string NombreMeses = "Meses.txt";
+            public void GrabarMeses(string DatoMeses)
+            {
+                StreamWriter AD = new StreamWriter(NombreMeses);
+                AD.WriteLine(DatoMeses);
+               
+                AD.Close();
+
+            }
+
+           public void RecorrerMeses(ListBox lstDatos)
+            {
+                lstDatos.Items.Clear();
+                string DatoLeido = "";
+                StreamReader AD = new StreamReader(NombreMeses);
+                DatoLeido = AD.ReadLine();
+                while (DatoLeido != null)
+                {
+                    lstDatos.Items.Add(DatoLeido);
+                    DatoLeido = AD.ReadLine();
+                }
+                AD.Close();
+           }
+
+
+
+
+
+
+
+
+
     }
 }

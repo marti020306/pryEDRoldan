@@ -46,7 +46,13 @@ namespace pryEDRoldan
             MessageBox.Show("El color " + txtNombre.Text + " se ha grabado correctamente");
             clsArchivo x = new clsArchivo();
             x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
             txtNombre.Clear();
+        }
+
+        private void frmColores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
