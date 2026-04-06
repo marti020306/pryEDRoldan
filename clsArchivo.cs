@@ -57,7 +57,7 @@ namespace pryEDRoldan
             }
 
            public void RecorrerMeses(ListBox lstDatos)
-            {
+           {
                 lstDatos.Items.Clear();
                 string DatoLeido = "";
                 StreamReader AD = new StreamReader(NombreMeses);
@@ -71,7 +71,14 @@ namespace pryEDRoldan
            }
 
 
+        public string NombreClientes = "Clientes.txt";
 
+        public void GrabarClientes(string DatoClientes)
+        {
+            StreamWriter AD = new StreamWriter(NombreClientes);
+            AD.WriteLine(DatoClientes);
+            AD.Close();
+        }
 
 
 
