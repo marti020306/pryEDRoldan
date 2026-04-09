@@ -11,14 +11,9 @@ namespace pryEDRoldan
 {
     internal class clsArchivo
     {
-        public string NomArchivo = "Colores.txt";
+        public string NomArchivo = "";
     
-        public void Grabar()
-        {
-            StreamWriter AD = new StreamWriter(NomArchivo);
-            AD.WriteLine("Hola!!");
-            AD.Close();
-        }
+       
 
         public void Grabar( String Dato)
         {
@@ -41,49 +36,25 @@ namespace pryEDRoldan
             }
             AD.Close();
 
-           
-
 
         }
-
-        public string NombreMeses = "Meses.txt";
-            public void GrabarMeses(string DatoMeses)
-            {
-                StreamWriter AD = new StreamWriter(NombreMeses);
-                AD.WriteLine(DatoMeses);
-               
-                AD.Close();
-
-            }
-
-           public void RecorrerMeses(ListBox lstDatos)
-           {
-                lstDatos.Items.Clear();
-                string DatoLeido = "";
-                StreamReader AD = new StreamReader(NombreMeses);
-                DatoLeido = AD.ReadLine();
-                while (DatoLeido != null)
-                {
-                    lstDatos.Items.Add(DatoLeido);
-                    DatoLeido = AD.ReadLine();
-                }
-                AD.Close();
-           }
-
-
-        public string NombreClientes = "Clientes.txt";
-
-        public void GrabarClientes(string DatoClientes)
+        
+        public void Borrar()
         {
-            StreamWriter AD = new StreamWriter(NombreClientes);
-            AD.WriteLine(DatoClientes);
+            StreamWriter AD = new StreamWriter(NomArchivo, false);
             AD.Close();
+
         }
 
+        public void Grabar(String Dato1, String Dato2, String Dato3)
+        {
+            StreamWriter AD = new StreamWriter(NomArchivo, true);
+            AD.Write(Dato1);
+            AD.Write(";")
+            AD.Write(Dato2);
+            AD.Write(";")
+            AD.WriteLine(Dato3);
+            AD.Close();
 
-
-
-
-
+        }
     }
-}

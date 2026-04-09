@@ -61,5 +61,12 @@ namespace pryEDRoldan
                 btnGrabar.Enabled = true;
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Clientes.csv";
+            x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+        }
     }
 }

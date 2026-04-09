@@ -56,5 +56,11 @@ namespace pryEDRoldan
             frmAlumnos frmAlumnos = new frmAlumnos();
             frmAlumnos.ShowDialog();
         }
+
+        private void carerraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras frmCarreras = new frmCarreras();
+            frmCarreras.ShowDialog();
+        }
     }
 }
