@@ -47,7 +47,13 @@ namespace pryEDRoldan
             x.NomArchivo = "Carreras.csv";
             x.Borrar();
             x.Recorrer(lstCarrera);
+            txtCarreras.Clear();
             MessageBox.Show("Los datos se han borrado correctamente");
+        }
+
+        private void frmCarreras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

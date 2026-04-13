@@ -43,16 +43,30 @@ namespace pryEDRoldan
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("El color " + txtNombre.Text + " se ha grabado correctamente");
+           
             clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Colores.txt";
             x.Grabar(txtNombre.Text);
             x.Recorrer(lstColores);
             txtNombre.Clear();
+
+            MessageBox.Show("El color " + txtNombre.Text + " se ha grabado correctamente");
         }
 
         private void frmColores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Colores.txt";
+            x.Borrar();
+            x.Recorrer(lstColores);
+            txtNombre.Clear();
+            MessageBox.Show("Los datos se han borrado correctamente");
+            
         }
     }
 }

@@ -33,6 +33,7 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lstColores = new System.Windows.Forms.ListBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -88,11 +89,22 @@
             this.lstColores.TabIndex = 4;
             this.lstColores.SelectedIndexChanged += new System.EventHandler(this.lstColores_SelectedIndexChanged);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(167, 305);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 340);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstColores);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnGrabar);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ListBox lstColores;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

@@ -50,11 +50,12 @@ namespace pryEDRoldan
         {
             StreamWriter AD = new StreamWriter(NomArchivo, true);
             AD.Write(Dato1);
-            AD.Write(";")
+            AD.Write(";");
             AD.Write(Dato2);
-            AD.Write(";")
+            AD.Write(";");
             AD.WriteLine(Dato3);
             AD.Close();
 
         }
     }
+}   
