@@ -67,6 +67,8 @@ namespace pryEDRoldan
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+            x.Recorrer(dgvClientes);
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -74,8 +76,14 @@ namespace pryEDRoldan
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Clientes.csv";
             x.Borrar();
-            //x.Recorrer();
-           MessageBox.Show("Archivo borrado");
+            x.Recorrer(dgvClientes);
+            MessageBox.Show("Los datos se han borrado correctamente");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtDeuda.Clear();
+
+
+
 
 
 

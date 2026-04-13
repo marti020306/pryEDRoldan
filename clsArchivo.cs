@@ -57,5 +57,20 @@ namespace pryEDRoldan
             AD.Close();
 
         }
+
+        public void Recorrer(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            String DatoLeido = "";
+            StreamReader AD = new StreamReader(NomArchivo);
+            DatoLeido= AD.ReadLine();
+
+            while (DatoLeido != null) 
+            {
+                Grilla.Rows.Add(DatoLeido.Split(';'));
+                DatoLeido = AD.ReadLine();
+            }
+            AD.Close();
+        }
     }
-}   
+}

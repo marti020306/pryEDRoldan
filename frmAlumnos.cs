@@ -58,5 +58,28 @@ namespace pryEDRoldan
                 btnGrabar.Enabled = true;
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Alumnos.csv";
+            x.Grabar(txtCodigo.Text, txtNombre.Text, cbxCarrera.Text);
+            x.Recorrer(dgbAlumnos);
+            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Alumnos.csv";
+            x.Borrar();
+            x.Recorrer(dgbAlumnos);
+            MessageBox.Show("Datos eliminados correctamente");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            cbxCarrera.Text = "";
+
+
+        }
     }
 }

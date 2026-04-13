@@ -35,10 +35,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgbAlumnos = new System.Windows.Forms.DataGridView();
+            this.cbxCarrera = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbxCarrera = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgbAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,12 +47,13 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(256, 169);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(103, 19);
             this.btnGrabar.TabIndex = 0;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lblCodigo
             // 
@@ -87,7 +89,7 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(117, 80);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(243, 20);
             this.txtNombre.TabIndex = 5;
@@ -96,7 +98,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(256, 32);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(104, 20);
             this.txtCodigo.TabIndex = 6;
@@ -110,50 +112,67 @@
             this.Column2,
             this.Column3});
             this.dgbAlumnos.Location = new System.Drawing.Point(11, 227);
-            this.dgbAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgbAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.dgbAlumnos.Name = "dgbAlumnos";
             this.dgbAlumnos.RowHeadersWidth = 51;
             this.dgbAlumnos.RowTemplate.Height = 24;
-            this.dgbAlumnos.Size = new System.Drawing.Size(404, 195);
+            this.dgbAlumnos.Size = new System.Drawing.Size(387, 195);
             this.dgbAlumnos.TabIndex = 7;
+            // 
+            // cbxCarrera
+            // 
+            this.cbxCarrera.Enabled = false;
+            this.cbxCarrera.FormattingEnabled = true;
+            this.cbxCarrera.Items.AddRange(new object[] {
+            "Analista de sistemas",
+            "Comercio Internacional ",
+            "Diseño Grafico",
+            "Ciberseguridad",
+            "Inteligencia Artificial ",
+            "Diseño de videojuegos"});
+            this.cbxCarrera.Location = new System.Drawing.Point(233, 119);
+            this.cbxCarrera.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCarrera.Name = "cbxCarrera";
+            this.cbxCarrera.Size = new System.Drawing.Size(127, 21);
+            this.cbxCarrera.TabIndex = 8;
+            this.cbxCarrera.SelectedIndexChanged += new System.EventHandler(this.cbxCarrera_SelectedIndexChanged);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(117, 169);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(102, 21);
+            this.btnLimpiar.TabIndex = 9;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Codigo";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Carerra";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // cbxCarrera
-            // 
-            this.cbxCarrera.Enabled = false;
-            this.cbxCarrera.FormattingEnabled = true;
-            this.cbxCarrera.Location = new System.Drawing.Point(256, 119);
-            this.cbxCarrera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbxCarrera.Name = "cbxCarrera";
-            this.cbxCarrera.Size = new System.Drawing.Size(104, 21);
-            this.cbxCarrera.TabIndex = 8;
-            this.cbxCarrera.SelectedIndexChanged += new System.EventHandler(this.cbxCarrera_SelectedIndexChanged);
+            this.Column3.Width = 150;
             // 
             // frmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 450);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.cbxCarrera);
             this.Controls.Add(this.dgbAlumnos);
             this.Controls.Add(this.txtCodigo);
@@ -162,7 +181,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnGrabar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumnos";
@@ -181,9 +200,10 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.DataGridView dgbAlumnos;
+        private System.Windows.Forms.ComboBox cbxCarrera;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ComboBox cbxCarrera;
     }
 }
