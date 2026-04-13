@@ -54,6 +54,7 @@ namespace pryEDRoldan
             x.Grabar(txtNombre.Text);
             x.Recorrer(lstMeses); 
             MessageBox.Show("El mes " + txtNombre.Text + " se ha grabado correctamente");
+            txtNombre.Clear();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -61,7 +62,10 @@ namespace pryEDRoldan
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Meses.txt";
             x.Borrar();
+            x.Recorrer(lstMeses);
             MessageBox.Show("Se han borrado los meses correctamente");
+            txtNombre.Clear();
+
 
         }
     }
