@@ -81,5 +81,10 @@ namespace pryEDRoldan
 
 
         }
+
+        private void dgbAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

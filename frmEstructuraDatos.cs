@@ -62,5 +62,13 @@ namespace pryEDRoldan
             frmCarreras frmCarreras = new frmCarreras();
             frmCarreras.ShowDialog();
         }
+
+       
+
+        private void colaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCola frmCola = new frmCola();
+            frmCola.ShowDialog();
+        }
     }
 }

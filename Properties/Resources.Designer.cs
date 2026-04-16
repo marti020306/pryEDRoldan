@@ -63,6 +63,16 @@ namespace pryEDRoldan.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap descarga {
+            get {
+                object obj = ResourceManager.GetObject("descarga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pink_wallpaper_Windows_11_jpg {
             get {
                 object obj = ResourceManager.GetObject("pink wallpaper Windows 11.jpg", resourceCulture);
