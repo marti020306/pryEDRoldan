@@ -89,5 +89,15 @@ namespace pryEDRoldan.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_04_20_at_10_53_18 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-04-20 at 10.53.18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
