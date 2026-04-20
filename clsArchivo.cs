@@ -81,6 +81,39 @@ namespace pryEDRoldan
                     cmb.Items.Add(DatoLeido);
                 }
             }
+            
+        }
+
+        public void Recorrer(DataGridView Grilla)
+        {
+            clsNodos aux = Primero;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Cod, aux.Nom, aux.Tra);
+                aux = aux.Sig;
+            }
+    }   {
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodos aux = Primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                lstDatos.Items.Add(aux.Cod);
+                aux = aux.Sig;
+            }
+        }
+
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodos aux = Primero;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Nom);
+                aux = aux.Sig;
+            }
         }
     }
-}

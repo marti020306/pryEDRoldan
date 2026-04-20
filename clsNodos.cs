@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace pryEDRoldan
 {
@@ -26,5 +28,18 @@ namespace pryEDRoldan
             get { return sig; }
             set { sig = value; }
         }
+
+        public String Nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+
+        public String Tra
+        {
+            get { return tra; }
+            set { tra = value; }
+        }
+
     }
 }
