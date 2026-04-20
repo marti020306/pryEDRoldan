@@ -13,8 +13,6 @@ namespace pryEDRoldan
     {
         public string NomArchivo = "";
     
-       
-
         public void Grabar( String Dato)
         {
             StreamWriter AD = new StreamWriter(NomArchivo, true);
@@ -24,9 +22,9 @@ namespace pryEDRoldan
 
         public void Recorrer(ListBox lstDatos)
         {
-
             lstDatos.Items.Clear();
             string DatoLeido = "";
+            if (!File.Exists(NomArchivo)) return;
             StreamReader AD = new StreamReader(NomArchivo);
             DatoLeido = AD.ReadLine();
             while (DatoLeido != null)
@@ -35,15 +33,12 @@ namespace pryEDRoldan
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();
-
-
         }
         
         public void Borrar()
         {
             StreamWriter AD = new StreamWriter(NomArchivo, false);
             AD.Close();
-
         }
 
         public void Grabar(String Dato1, String Dato2, String Dato3)
@@ -55,13 +50,13 @@ namespace pryEDRoldan
             AD.Write(";");
             AD.WriteLine(Dato3);
             AD.Close();
-
         }
 
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             String DatoLeido = "";
+            if (!File.Exists(NomArchivo)) return;
             StreamReader AD = new StreamReader(NomArchivo);
             DatoLeido= AD.ReadLine();
 
@@ -71,6 +66,21 @@ namespace pryEDRoldan
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();
+        }
+
+        // Nuevo: recorrer y rellenar un ComboBox (para las Carreras)
+        public void Recorrer(ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            if (!File.Exists(NomArchivo)) return;
+            using (StreamReader AD = new StreamReader(NomArchivo))
+            {
+                string DatoLeido;
+                while ((DatoLeido = AD.ReadLine()) != null)
+                {
+                    cmb.Items.Add(DatoLeido);
+                }
+            }
         }
     }
 }

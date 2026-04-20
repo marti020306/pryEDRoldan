@@ -37,8 +37,18 @@ namespace pryEDRoldan
             x.NomArchivo = "Carreras.csv";
             x.Grabar(txtCarreras.Text);
             x.Recorrer(lstCarrera);
-            MessageBox.Show("El mes " + txtCarreras.Text + " se ha grabado correctamente");
+            MessageBox.Show("La carrera " + txtCarreras.Text + " se ha grabado correctamente");
 
+            // Actualizar cualquier frmAlumnos abierto
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is frmAlumnos frm)
+                {
+                    frm.CargarCarreras();
+                }
+            }
+
+            txtCarreras.Clear();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

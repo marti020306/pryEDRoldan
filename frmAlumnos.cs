@@ -15,7 +15,10 @@ namespace pryEDRoldan
         public frmAlumnos()
         {
             InitializeComponent();
+            CargarCarreras();
         }
+
+       
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
@@ -57,6 +60,8 @@ namespace pryEDRoldan
             {
                 btnGrabar.Enabled = true;
             }
+
+
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -80,7 +85,16 @@ namespace pryEDRoldan
             cbxCarrera.Text = "";
 
 
+        } 
+        public void CargarCarreras()
+
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Carreras.csv";
+            x.Recorrer(cbxCarrera);
         }
+
+
 
         private void dgbAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

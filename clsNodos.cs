@@ -14,20 +14,17 @@ namespace pryEDRoldan
         private String tra;
         private clsNodos sig;
 
+        //Propiedades del nodo
+        public Int32 Cod
+        {
+            get { return cod; }
+            set { cod = value; }
+        }
+
+        public clsNodos Sig
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
     }
-
-    //Propidades del nodo
-
-    public Int32 Cod
-    {
-        get { return cod; }
-        set { cod = value; }
-        
-
-    }
-
-    public cls nodos Sig
-    {
-        get { return sig; }
-        set { sig = value; }
-    }
+}
