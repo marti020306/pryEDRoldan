@@ -12,8 +12,8 @@ namespace pryEDRoldan
     internal class clsArchivo
     {
         public string NomArchivo = "";
-    
-        public void Grabar( String Dato)
+
+        public void Grabar(String Dato)
         {
             StreamWriter AD = new StreamWriter(NomArchivo, true);
             AD.WriteLine(Dato);
@@ -34,7 +34,7 @@ namespace pryEDRoldan
             }
             AD.Close();
         }
-        
+
         public void Borrar()
         {
             StreamWriter AD = new StreamWriter(NomArchivo, false);
@@ -58,9 +58,9 @@ namespace pryEDRoldan
             String DatoLeido = "";
             if (!File.Exists(NomArchivo)) return;
             StreamReader AD = new StreamReader(NomArchivo);
-            DatoLeido= AD.ReadLine();
+            DatoLeido = AD.ReadLine();
 
-            while (DatoLeido != null) 
+            while (DatoLeido != null)
             {
                 Grilla.Rows.Add(DatoLeido.Split(';'));
                 DatoLeido = AD.ReadLine();
@@ -68,7 +68,7 @@ namespace pryEDRoldan
             AD.Close();
         }
 
-        // Nuevo: recorrer y rellenar un ComboBox (para las Carreras)
+
         public void Recorrer(ComboBox cmb)
         {
             cmb.Items.Clear();
@@ -81,39 +81,15 @@ namespace pryEDRoldan
                     cmb.Items.Add(DatoLeido);
                 }
             }
-            
+
         }
 
-        public void Recorrer(DataGridView Grilla)
-        {
-            clsNodos aux = Primero;
-            Grilla.Rows.Clear();
-            while (aux != null)
-            {
-                Grilla.Rows.Add(aux.Cod, aux.Nom, aux.Tra);
-                aux = aux.Sig;
-            }
-    }   {
+       
+       
 
-        public void Recorrer(ListBox Lista)
-        {
-            clsNodos aux = Primero;
-            Lista.Items.Clear();
-            while (aux != null)
-            {
-                lstDatos.Items.Add(aux.Cod);
-                aux = aux.Sig;
-            }
-        }
+     
 
-        public void Recorrer(ComboBox Combo)
-        {
-            clsNodos aux = Primero;
-            Combo.Items.Clear();
-            while (aux != null)
-            {
-                Combo.Items.Add(aux.Nom);
-                aux = aux.Sig;
-            }
-        }
+       
     }
+
+}

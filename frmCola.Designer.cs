@@ -47,10 +47,10 @@
             this.lblBlancoCodigo = new System.Windows.Forms.Label();
             this.grbListaGrilla = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lstLista = new System.Windows.Forms.ListBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstLista = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxCola)).BeginInit();
             this.grbElemento.SuspendLayout();
             this.grbEliminado.SuspendLayout();
@@ -144,6 +144,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // grbEliminado
             // 
@@ -169,6 +170,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblTramite2
             // 
@@ -247,14 +249,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(400, 212);
             this.dataGridView1.TabIndex = 1;
             // 
-            // lstLista
-            // 
-            this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(15, 31);
-            this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(196, 212);
-            this.lstLista.TabIndex = 0;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Codigo";
@@ -273,6 +267,14 @@
             this.Column3.Name = "Column3";
             this.Column3.Width = 120;
             // 
+            // lstLista
+            // 
+            this.lstLista.FormattingEnabled = true;
+            this.lstLista.Location = new System.Drawing.Point(15, 31);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(196, 212);
+            this.lstLista.TabIndex = 0;
+            // 
             // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +287,7 @@
             this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Dinamica Lineal - Cola";
+            this.Load += new System.EventHandler(this.frmCola_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxCola)).EndInit();
             this.grbElemento.ResumeLayout(false);
             this.grbElemento.PerformLayout();
