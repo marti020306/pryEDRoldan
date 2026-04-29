@@ -76,5 +76,11 @@ namespace pryEDRoldan
             frmPila frmPila = new frmPila();   
             frmPila.ShowDialog();
         }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple frmListaSimple = new frmListaSimple();
+            frmListaSimple.ShowDialog();
+        }
     }
 }
