@@ -21,5 +21,22 @@ namespace pryEDRoldan
         {
 
         }
+        clsListaSimple objLista = new clsListaSimple();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodos x = new clsNodos();
+            x.Cod = Convert.ToInt32(txtCodigo.Text);
+            x.Nom = txtNombre.Text;
+            x.Tra = txtTramite.Text;
+            objLista.Agregar(x);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(dgvLista);
+            objLista.Recorrer(cbxCodigo);
+            MessageBox.Show("Agregado correctamente");
+
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+        }
     }
 }
