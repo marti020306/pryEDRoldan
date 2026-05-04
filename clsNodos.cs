@@ -15,6 +15,8 @@ namespace pryEDRoldan
         private String nom;
         private String tra;
         private clsNodos sig;
+        private clsNodos ant;
+       
 
         //Propiedades del nodo
         public Int32 Cod
@@ -40,6 +42,14 @@ namespace pryEDRoldan
             get { return tra; }
             set { tra = value; }
         }
+
+        public clsNodos anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+        
 
     }
 }
