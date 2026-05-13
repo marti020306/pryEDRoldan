@@ -70,9 +70,9 @@
             this.grbEliminar.Controls.Add(this.lblNombre1);
             this.grbEliminar.Controls.Add(this.lblTramite1);
             this.grbEliminar.Location = new System.Drawing.Point(573, 15);
-            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Size = new System.Drawing.Size(267, 246);
             this.grbEliminar.TabIndex = 0;
             this.grbEliminar.TabStop = false;
@@ -81,7 +81,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(85, 210);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 13;
@@ -156,9 +156,9 @@
             this.grbNuevo.Controls.Add(this.txtNombre);
             this.grbNuevo.Controls.Add(this.txtTramite);
             this.grbNuevo.Location = new System.Drawing.Point(283, 15);
-            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Name = "grbNuevo";
-            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Size = new System.Drawing.Size(267, 246);
             this.grbNuevo.TabIndex = 0;
             this.grbNuevo.TabStop = false;
@@ -166,8 +166,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(61, 210);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(127, 28);
             this.btnAgregar.TabIndex = 7;
@@ -208,35 +209,38 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(113, 38);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(113, 96);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(113, 159);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 6;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // grbGrilla
             // 
             this.grbGrilla.Controls.Add(this.dgvPila);
             this.grbGrilla.Controls.Add(this.lstPila);
             this.grbGrilla.Location = new System.Drawing.Point(16, 290);
-            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Name = "grbGrilla";
-            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Size = new System.Drawing.Size(824, 267);
             this.grbGrilla.TabIndex = 1;
             this.grbGrilla.TabStop = false;
@@ -250,7 +254,7 @@
             this.Column2,
             this.Column3});
             this.dgvPila.Location = new System.Drawing.Point(275, 34);
-            this.dgvPila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPila.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPila.Name = "dgvPila";
             this.dgvPila.RowHeadersWidth = 51;
             this.dgvPila.Size = new System.Drawing.Size(493, 213);
@@ -282,7 +286,7 @@
             this.lstPila.FormattingEnabled = true;
             this.lstPila.ItemHeight = 16;
             this.lstPila.Location = new System.Drawing.Point(8, 34);
-            this.lstPila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstPila.Margin = new System.Windows.Forms.Padding(4);
             this.lstPila.Name = "lstPila";
             this.lstPila.Size = new System.Drawing.Size(213, 212);
             this.lstPila.TabIndex = 0;
@@ -318,7 +322,7 @@
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbfoto);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "   ";

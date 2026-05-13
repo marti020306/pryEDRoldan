@@ -30,6 +30,7 @@
         {
             this.picLista = new System.Windows.Forms.PictureBox();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.cbxCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grbNuevo = new System.Windows.Forms.GroupBox();
@@ -57,7 +58,7 @@
             // 
             this.picLista.Image = global::pryEDRoldan.Properties.Resources.descarga1;
             this.picLista.Location = new System.Drawing.Point(16, 15);
-            this.picLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLista.Margin = new System.Windows.Forms.Padding(4);
             this.picLista.Name = "picLista";
             this.picLista.Size = new System.Drawing.Size(287, 263);
             this.picLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -66,25 +67,38 @@
             // 
             // grbEliminar
             // 
+            this.grbEliminar.Controls.Add(this.btnEliminar);
             this.grbEliminar.Controls.Add(this.cbxCodigo);
             this.grbEliminar.Controls.Add(this.lblCodigo2);
             this.grbEliminar.Location = new System.Drawing.Point(628, 15);
-            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Size = new System.Drawing.Size(267, 263);
             this.grbEliminar.TabIndex = 1;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Elemento a eliminar";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(75, 209);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(136, 28);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // cbxCodigo
             // 
             this.cbxCodigo.FormattingEnabled = true;
             this.cbxCodigo.Location = new System.Drawing.Point(103, 161);
-            this.cbxCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCodigo.Name = "cbxCodigo";
             this.cbxCodigo.Size = new System.Drawing.Size(143, 24);
             this.cbxCodigo.TabIndex = 3;
+            this.cbxCodigo.SelectedIndexChanged += new System.EventHandler(this.cbxCodigo_SelectedIndexChanged);
             // 
             // lblCodigo2
             // 
@@ -106,9 +120,9 @@
             this.grbNuevo.Controls.Add(this.lblNombre);
             this.grbNuevo.Controls.Add(this.lblCodigo);
             this.grbNuevo.Location = new System.Drawing.Point(336, 15);
-            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Name = "grbNuevo";
-            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Size = new System.Drawing.Size(267, 263);
             this.grbNuevo.TabIndex = 0;
             this.grbNuevo.TabStop = false;
@@ -116,8 +130,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(40, 209);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(160, 28);
             this.btnAgregar.TabIndex = 2;
@@ -128,26 +143,29 @@
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(125, 161);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 5;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(125, 101);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(125, 39);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblTramite
             // 
@@ -185,7 +203,7 @@
             this.lstLista.FormattingEnabled = true;
             this.lstLista.ItemHeight = 16;
             this.lstLista.Location = new System.Drawing.Point(8, 21);
-            this.lstLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstLista.Margin = new System.Windows.Forms.Padding(4);
             this.lstLista.Name = "lstLista";
             this.lstLista.Size = new System.Drawing.Size(252, 228);
             this.lstLista.TabIndex = 2;
@@ -195,9 +213,9 @@
             this.grbGrilla.Controls.Add(this.dgvLista);
             this.grbGrilla.Controls.Add(this.lstLista);
             this.grbGrilla.Location = new System.Drawing.Point(16, 293);
-            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Name = "grbGrilla";
-            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Size = new System.Drawing.Size(892, 261);
             this.grbGrilla.TabIndex = 3;
             this.grbGrilla.TabStop = false;
@@ -211,7 +229,7 @@
             this.Column2,
             this.Column3});
             this.dgvLista.Location = new System.Drawing.Point(287, 23);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.RowHeadersWidth = 51;
             this.dgvLista.Size = new System.Drawing.Size(584, 226);
@@ -247,7 +265,7 @@
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.picLista);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de datos lineal: Lista Simple";
@@ -282,5 +300,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

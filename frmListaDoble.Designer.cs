@@ -62,7 +62,7 @@
             // 
             this.picImagen.Image = global::pryEDRoldan.Properties.Resources.dobleenlace;
             this.picImagen.Location = new System.Drawing.Point(16, 15);
-            this.picImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picImagen.Margin = new System.Windows.Forms.Padding(4);
             this.picImagen.Name = "picImagen";
             this.picImagen.Size = new System.Drawing.Size(241, 261);
             this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,9 +79,9 @@
             this.grbNuevo.Controls.Add(this.lblNombre);
             this.grbNuevo.Controls.Add(this.lblCodigo);
             this.grbNuevo.Location = new System.Drawing.Point(280, 15);
-            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Name = "grbNuevo";
-            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4);
             this.grbNuevo.Size = new System.Drawing.Size(267, 261);
             this.grbNuevo.TabIndex = 1;
             this.grbNuevo.TabStop = false;
@@ -90,36 +90,41 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(127, 87);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(127, 34);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(127, 135);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 4;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(53, 183);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(133, 28);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -157,9 +162,9 @@
             this.grbEliminar.Controls.Add(this.lblCodigo1);
             this.grbEliminar.Controls.Add(this.btnEliminar);
             this.grbEliminar.Location = new System.Drawing.Point(589, 15);
-            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4);
             this.grbEliminar.Size = new System.Drawing.Size(269, 126);
             this.grbEliminar.TabIndex = 0;
             this.grbEliminar.TabStop = false;
@@ -169,10 +174,11 @@
             // 
             this.cbxCodigo.FormattingEnabled = true;
             this.cbxCodigo.Location = new System.Drawing.Point(93, 44);
-            this.cbxCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCodigo.Name = "cbxCodigo";
             this.cbxCodigo.Size = new System.Drawing.Size(160, 24);
             this.cbxCodigo.TabIndex = 8;
+            this.cbxCodigo.SelectedIndexChanged += new System.EventHandler(this.cbxCodigo_SelectedIndexChanged);
             // 
             // lblCodigo1
             // 
@@ -186,22 +192,24 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(75, 87);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // grbListar
             // 
             this.grbListar.Controls.Add(this.radDescendente);
             this.grbListar.Controls.Add(this.radAscendente);
             this.grbListar.Location = new System.Drawing.Point(589, 150);
-            this.grbListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbListar.Margin = new System.Windows.Forms.Padding(4);
             this.grbListar.Name = "grbListar";
-            this.grbListar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbListar.Padding = new System.Windows.Forms.Padding(4);
             this.grbListar.Size = new System.Drawing.Size(269, 126);
             this.grbListar.TabIndex = 2;
             this.grbListar.TabStop = false;
@@ -211,34 +219,36 @@
             // 
             this.radDescendente.AutoSize = true;
             this.radDescendente.Location = new System.Drawing.Point(61, 76);
-            this.radDescendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radDescendente.Margin = new System.Windows.Forms.Padding(4);
             this.radDescendente.Name = "radDescendente";
             this.radDescendente.Size = new System.Drawing.Size(109, 20);
             this.radDescendente.TabIndex = 3;
             this.radDescendente.TabStop = true;
             this.radDescendente.Text = "Descendente";
             this.radDescendente.UseVisualStyleBackColor = true;
+            this.radDescendente.CheckedChanged += new System.EventHandler(this.radDescendente_CheckedChanged);
             // 
             // radAscendente
             // 
             this.radAscendente.AutoSize = true;
             this.radAscendente.Location = new System.Drawing.Point(61, 34);
-            this.radAscendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radAscendente.Margin = new System.Windows.Forms.Padding(4);
             this.radAscendente.Name = "radAscendente";
             this.radAscendente.Size = new System.Drawing.Size(100, 20);
             this.radAscendente.TabIndex = 4;
             this.radAscendente.TabStop = true;
             this.radAscendente.Text = "Ascendente";
             this.radAscendente.UseVisualStyleBackColor = true;
+            this.radAscendente.CheckedChanged += new System.EventHandler(this.radAscendente_CheckedChanged);
             // 
             // grbGrilla
             // 
             this.grbGrilla.Controls.Add(this.dgvLista);
             this.grbGrilla.Controls.Add(this.lstDoble);
             this.grbGrilla.Location = new System.Drawing.Point(16, 295);
-            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Name = "grbGrilla";
-            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4);
             this.grbGrilla.Size = new System.Drawing.Size(843, 266);
             this.grbGrilla.TabIndex = 3;
             this.grbGrilla.TabStop = false;
@@ -252,7 +262,7 @@
             this.Column2,
             this.Column3});
             this.dgvLista.Location = new System.Drawing.Point(264, 23);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.RowHeadersWidth = 51;
             this.dgvLista.Size = new System.Drawing.Size(535, 229);
@@ -284,7 +294,7 @@
             this.lstDoble.FormattingEnabled = true;
             this.lstDoble.ItemHeight = 16;
             this.lstDoble.Location = new System.Drawing.Point(8, 23);
-            this.lstDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstDoble.Margin = new System.Windows.Forms.Padding(4);
             this.lstDoble.Name = "lstDoble";
             this.lstDoble.Size = new System.Drawing.Size(232, 228);
             this.lstDoble.TabIndex = 0;
@@ -300,7 +310,7 @@
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.picImagen);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaDoble";
             this.Text = "Lista Doblemente Enlazada";
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();

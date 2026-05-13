@@ -73,5 +73,32 @@ namespace pryEDRoldan
                 MessageBox.Show("No hay Personas en la pila");
             }
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+               ValidarDatos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+                        ValidarDatos();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+                        ValidarDatos();
+        }
+
+        private void ValidarDatos()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
     }
 }

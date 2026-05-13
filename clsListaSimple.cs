@@ -73,6 +73,24 @@ namespace pryEDRoldan
             }
         }
 
+        public void Recorrer(String NombreArchivo)
+        {
+            clsNodos aux = Primero;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Cod);
+                AD.Write(";");
+                AD.Write(aux.Nom);
+                AD.Write(";");
+                AD.WriteLine(aux.Tra);
+                aux = aux.Sig;
+            }
+            AD.Close();
+        }
+
 
         public void Eliminar(int cod)
         {
@@ -103,28 +121,11 @@ namespace pryEDRoldan
             }
         }
 
-        public void Recorrer(String NombreArchivo)
-        {
-            clsNodos aux = Primero;
-            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
-            AD.WriteLine("Lista de espera\n");
-            AD.WriteLine("Codigo;Nombre;Tramite");
-            while (aux != null)
-            {
-                AD.Write(aux.Cod);
-                AD.Write(";");
-                AD.Write(aux.Nom);
-                AD.Write(";");
-                AD.WriteLine(aux.Tra);
-                aux = aux.Sig;
-
-            }
-            AD.Close();
+       
 
 
 
 
-        }
         public void Recorrer(ComboBox Combo)
         {
             clsNodos aux = Primero;
