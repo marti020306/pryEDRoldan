@@ -131,7 +131,7 @@ namespace pryEDRoldan
             Combo.Items.Clear();
             while (aux != null)
             {
-                Combo.Items.Add(aux.Tra);
+                Combo.Items.Add(aux.Cod);
                 aux = aux.Sig;
             }
 
