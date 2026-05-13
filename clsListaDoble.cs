@@ -37,13 +37,21 @@ namespace pryEDRoldan
                 if(Nvo.Cod < Primero.Cod)
                 {
                     Nvo.Sig = Primero;
+
                     Primero.anterior = Nvo;
+
+                    Primero.anterior = Nvo; 
+
                     Primero = Nvo;
                 }
                 else if (Nvo.Cod > Ultimo.Cod)
                 {
                     Ultimo.Sig = Nvo;
+
                     Nvo.anterior = Ultimo;
+
+                    Nvo.anterior = Ultimo; 
+
                     Ultimo = Nvo;
                 }
                 else
@@ -53,7 +61,6 @@ namespace pryEDRoldan
 
                     while (Aux.Cod < Nvo.Cod)
                     {
-                        
                         Ant = Aux;
                         Aux = Aux.Sig;
                     }
