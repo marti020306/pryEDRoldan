@@ -37,13 +37,13 @@ namespace pryEDRoldan
                 if(Nvo.Cod < Primero.Cod)
                 {
                     Nvo.Sig = Primero;
-                    Primero.ant = Nvo;
+                    Primero.anterior = Nvo;
                     Primero = Nvo;
                 }
                 else if (Nvo.Cod > Ultimo.Cod)
                 {
                     Ultimo.Sig = Nvo;
-                    Nvo.ant = Ultimo;
+                    Nvo.anterior = Ultimo;
                     Ultimo = Nvo;
                 }
                 else

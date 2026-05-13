@@ -20,33 +20,29 @@ namespace pryEDRoldan
         
         public void Agregar(clsNodos Nuevo)
         {
-
             if (Primero == null)
             {
                 Primero = Nuevo;
-
             }
             else
             {
                 Nuevo.Sig = Primero;
                 Primero = Nuevo;
             }
-
-           
-
-
-
-
         }
 
-        public void Eliminar()
+        // Ahora devuelve el nodo eliminado para que el formulario pueda mostrar sus datos
+        public clsNodos Eliminar()
         {
-           if (Primero == null)
-           {
-                Primero = Primero.Sig;
+            if (Primero == null)
+            {
+                return null;
+            }
 
-           }
-
+            clsNodos eliminado = Primero;
+            Primero = Primero.Sig;
+            eliminado.Sig = null; // desconectar el nodo eliminado
+            return eliminado;
         }
 
         public void Recorrer(DataGridView Grilla)
@@ -59,8 +55,6 @@ namespace pryEDRoldan
                 aux = aux.Sig;
             }
         }
-
-       
 
         public void Recorrer(ListBox Lista)
         {
@@ -82,30 +76,25 @@ namespace pryEDRoldan
                 Combo.Items.Add(aux.Nom);
                 aux = aux.Sig;
             }
-
         }
 
-        public void Recorrer(String NombreArchivo)
+        public void Recorrer(string NombreArchivo)
         {
             clsNodos aux = Primero;
-            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
-            AD.WriteLine("Lista de espera\n");
-            AD.WriteLine("Codigo;Nombre;Tramite");
-            while (aux != null)
+            using (var AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8))
             {
-                AD.Write(aux.Cod);
-                AD.Write(";");
-                AD.Write(aux.Nom);
-                AD.Write(";");
-                AD.WriteLine(aux.Tra);
-                aux = aux.Sig;
-
+                AD.WriteLine("Lista de espera");
+                AD.WriteLine("Codigo;Nombre;Tramite");
+                while (aux != null)
+                {
+                    AD.Write(aux.Cod);
+                    AD.Write(";");
+                    AD.Write(aux.Nom);
+                    AD.Write(";");
+                    AD.WriteLine(aux.Tra);
+                    aux = aux.Sig;
+                }
             }
-            AD.Close();
-
-
-
-
         }
-}
     }
+}

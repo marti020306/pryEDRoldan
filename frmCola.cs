@@ -27,7 +27,7 @@ namespace pryEDRoldan
             ColaEspera.Agregar(Persona);
             MessageBox.Show("Persona Agregada a la Cola de Espera");
             ColaEspera.Recorrer(lstLista);
-            ColaEspera.Recorrer(dataGridView1);
+            ColaEspera.Recorrer(dgvCola);
             ColaEspera.Recorrer("Cola.csv");
 
             txtCodigo.Clear();
@@ -46,7 +46,7 @@ namespace pryEDRoldan
                  ColaEspera.Eliminar();
                  MessageBox.Show("Persona Eliminada de la Cola de Espera");
                  ColaEspera.Recorrer(lstLista);
-                 ColaEspera.Recorrer(dataGridView1);
+                 ColaEspera.Recorrer(dgvCola);
                  ColaEspera.Recorrer("Cola.csv");
 
             }

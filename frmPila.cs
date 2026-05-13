@@ -39,23 +39,38 @@ namespace pryEDRoldan
         {
             if (objPila.Primero != null)
             {
-                lblCodigoBlanco.Text = objPila.Primero.Cod.ToString();
-                lblNombreBlanco.Text = objPila.Primero.Nom;
-                lblTramiteBlanco.Text = objPila.Primero.Tra;
+                // Eliminar y obtener el nodo eliminado
+                clsNodos eliminado = objPila.Eliminar();
 
-                objPila.Eliminar();
-                objPila.Recorrer(dgvPila);
-                objPila.Recorrer(lstPila);
-                objPila.Recorrer("Pila.csv");
-                MessageBox.Show("Tramite eliminado de la pila");
+                if (eliminado != null)
+                {
+                    // Mostrar los datos del elemento eliminado en las etiquetas lblBlanco
+                    lblCodigoBlanco.Text = eliminado.Cod.ToString();
+                    lblNombreBlanco.Text = eliminado.Nom;
+                    lblTramiteBlanco.Text = eliminado.Tra;
 
+                    // Actualizar vistas y archivo
+                    objPila.Recorrer(dgvPila);
+                    objPila.Recorrer(lstPila);
+                    objPila.Recorrer("Pila.csv");
+
+                    MessageBox.Show("Elemento eliminado correctamente");
+                }
+                else
+                {
+                    // Caso improbable: no se pudo eliminar
+                    lblCodigoBlanco.Text = "";
+                    lblNombreBlanco.Text = "";
+                    lblTramiteBlanco.Text = "";
+                    MessageBox.Show("Error al eliminar elemento");
+                }
             }
             else
             {
                 lblCodigoBlanco.Text = "";
                 lblNombreBlanco.Text = "";
                 lblTramiteBlanco.Text = "";
-
+                MessageBox.Show("No hay Personas en la pila");
             }
         }
     }

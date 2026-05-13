@@ -194,5 +194,8 @@
   <ItemGroup>
     <None Include="Resources\dobleenlace.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pila.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

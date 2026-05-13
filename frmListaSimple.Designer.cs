@@ -28,90 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picLista = new System.Windows.Forms.PictureBox();
+            this.grbEliminar = new System.Windows.Forms.GroupBox();
             this.cbxCodigo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCodigo2 = new System.Windows.Forms.Label();
+            this.grbNuevo = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lstLista = new System.Windows.Forms.ListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grbGrilla = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLista)).BeginInit();
+            this.grbEliminar.SuspendLayout();
+            this.grbNuevo.SuspendLayout();
+            this.grbGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picLista
             // 
-            this.pictureBox1.Image = global::pryEDRoldan.Properties.Resources.descarga1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 214);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picLista.Image = global::pryEDRoldan.Properties.Resources.descarga1;
+            this.picLista.Location = new System.Drawing.Point(16, 15);
+            this.picLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLista.Name = "picLista";
+            this.picLista.Size = new System.Drawing.Size(287, 263);
+            this.picLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLista.TabIndex = 0;
+            this.picLista.TabStop = false;
             // 
-            // groupBox1
+            // grbEliminar
             // 
-            this.groupBox1.Controls.Add(this.cbxCodigo);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(471, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 214);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Elemento a eliminar";
+            this.grbEliminar.Controls.Add(this.cbxCodigo);
+            this.grbEliminar.Controls.Add(this.lblCodigo2);
+            this.grbEliminar.Location = new System.Drawing.Point(628, 15);
+            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Name = "grbEliminar";
+            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEliminar.Size = new System.Drawing.Size(267, 263);
+            this.grbEliminar.TabIndex = 1;
+            this.grbEliminar.TabStop = false;
+            this.grbEliminar.Text = "Elemento a eliminar";
             // 
             // cbxCodigo
             // 
             this.cbxCodigo.FormattingEnabled = true;
-            this.cbxCodigo.Location = new System.Drawing.Point(77, 131);
+            this.cbxCodigo.Location = new System.Drawing.Point(103, 161);
+            this.cbxCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxCodigo.Name = "cbxCodigo";
-            this.cbxCodigo.Size = new System.Drawing.Size(108, 21);
+            this.cbxCodigo.Size = new System.Drawing.Size(143, 24);
             this.cbxCodigo.TabIndex = 3;
             // 
-            // label1
+            // lblCodigo2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 134);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo:";
+            this.lblCodigo2.AutoSize = true;
+            this.lblCodigo2.Location = new System.Drawing.Point(25, 165);
+            this.lblCodigo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo2.Name = "lblCodigo2";
+            this.lblCodigo2.Size = new System.Drawing.Size(54, 16);
+            this.lblCodigo2.TabIndex = 1;
+            this.lblCodigo2.Text = "Codigo:";
             // 
-            // groupBox2
+            // grbNuevo
             // 
-            this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Controls.Add(this.txtTramite);
-            this.groupBox2.Controls.Add(this.txtNombre);
-            this.groupBox2.Controls.Add(this.txtCodigo);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.lblNombre);
-            this.groupBox2.Controls.Add(this.lblCodigo);
-            this.groupBox2.Location = new System.Drawing.Point(252, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 214);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nuevo Elemento";
+            this.grbNuevo.Controls.Add(this.btnAgregar);
+            this.grbNuevo.Controls.Add(this.txtTramite);
+            this.grbNuevo.Controls.Add(this.txtNombre);
+            this.grbNuevo.Controls.Add(this.txtCodigo);
+            this.grbNuevo.Controls.Add(this.lblTramite);
+            this.grbNuevo.Controls.Add(this.lblNombre);
+            this.grbNuevo.Controls.Add(this.lblCodigo);
+            this.grbNuevo.Location = new System.Drawing.Point(336, 15);
+            this.grbNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Name = "grbNuevo";
+            this.grbNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNuevo.Size = new System.Drawing.Size(267, 263);
+            this.grbNuevo.TabIndex = 0;
+            this.grbNuevo.TabStop = false;
+            this.grbNuevo.Text = "Nuevo Elemento";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(30, 170);
+            this.btnAgregar.Location = new System.Drawing.Point(40, 209);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(120, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(160, 28);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -119,71 +127,81 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(94, 131);
+            this.txtTramite.Location = new System.Drawing.Point(125, 161);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(94, 82);
+            this.txtNombre.Location = new System.Drawing.Point(125, 101);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(94, 32);
+            this.txtCodigo.Location = new System.Drawing.Point(125, 39);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 3;
             // 
-            // label3
+            // lblTramite
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tramite:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblTramite.AutoSize = true;
+            this.lblTramite.Location = new System.Drawing.Point(20, 165);
+            this.lblTramite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(56, 16);
+            this.lblTramite.TabIndex = 2;
+            this.lblTramite.Text = "Tramite:";
+            this.lblTramite.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(15, 85);
+            this.lblNombre.Location = new System.Drawing.Point(20, 105);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(15, 35);
+            this.lblCodigo.Location = new System.Drawing.Point(20, 43);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(54, 16);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo:";
             // 
             // lstLista
             // 
             this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(6, 17);
+            this.lstLista.ItemHeight = 16;
+            this.lstLista.Location = new System.Drawing.Point(8, 21);
+            this.lstLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(190, 186);
+            this.lstLista.Size = new System.Drawing.Size(252, 228);
             this.lstLista.TabIndex = 2;
             // 
-            // groupBox3
+            // grbGrilla
             // 
-            this.groupBox3.Controls.Add(this.dgvLista);
-            this.groupBox3.Controls.Add(this.lstLista);
-            this.groupBox3.Location = new System.Drawing.Point(12, 238);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(669, 212);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Listado en una Lista y una Grilla";
+            this.grbGrilla.Controls.Add(this.dgvLista);
+            this.grbGrilla.Controls.Add(this.lstLista);
+            this.grbGrilla.Location = new System.Drawing.Point(16, 293);
+            this.grbGrilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Name = "grbGrilla";
+            this.grbGrilla.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbGrilla.Size = new System.Drawing.Size(892, 261);
+            this.grbGrilla.TabIndex = 3;
+            this.grbGrilla.TabStop = false;
+            this.grbGrilla.Text = "Listado en una Lista y una Grilla";
             // 
             // dgvLista
             // 
@@ -192,46 +210,53 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvLista.Location = new System.Drawing.Point(215, 19);
+            this.dgvLista.Location = new System.Drawing.Point(287, 23);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(438, 184);
+            this.dgvLista.RowHeadersWidth = 51;
+            this.dgvLista.Size = new System.Drawing.Size(584, 226);
             this.dgvLista.TabIndex = 4;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 170;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Tramite";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 150;
             // 
             // frmListaSimple
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 462);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(924, 569);
+            this.Controls.Add(this.grbGrilla);
+            this.Controls.Add(this.grbNuevo);
+            this.Controls.Add(this.grbEliminar);
+            this.Controls.Add(this.picLista);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de datos lineal: Lista Simple";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLista)).EndInit();
+            this.grbEliminar.ResumeLayout(false);
+            this.grbEliminar.PerformLayout();
+            this.grbNuevo.ResumeLayout(false);
+            this.grbNuevo.PerformLayout();
+            this.grbGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
 
@@ -239,20 +264,20 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox picLista;
+        private System.Windows.Forms.GroupBox grbEliminar;
+        private System.Windows.Forms.GroupBox grbNuevo;
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.ComboBox cbxCodigo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ListBox lstLista;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grbGrilla;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
