@@ -312,6 +312,7 @@
             this.Controls.Add(this.picImagen);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaDoble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Doblemente Enlazada";
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
             this.grbNuevo.ResumeLayout(false);
