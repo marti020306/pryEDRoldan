@@ -88,5 +88,11 @@ namespace pryEDRoldan
             frmListaDoble frm = new frmListaDoble();  
             frm.ShowDialog();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario frmArbol = new frmArbolBinario();
+            frmArbol.ShowDialog();
+        }
     }
 }
