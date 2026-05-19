@@ -49,7 +49,18 @@ namespace pryEDRoldan
             set { ant = value; }
         }
 
-        
+        public clsNodos Izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public clsNodos Derecho
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
+
+
 
     }
 }
