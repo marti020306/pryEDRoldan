@@ -87,5 +87,39 @@ namespace pryEDRoldan
                 InOrdenAsc(Lst, R.Derecho);
             }
         }
-    }
+
+
+        private void PreOrden(DataGridView Dgv, clsNodos R)
+        {
+            if (R != null)
+            {
+                Dgv.Rows.Add(R.Cod, R.Nom, R.Tra);
+               
+                if (R.Izquierdo != null)
+                {
+                    PreOrden(Dgv, R.Izquierdo);
+                }
+                if (R.Derecho != null)
+                {
+                    PreOrden(Dgv, R.Derecho);
+                }
+            }
+        }
+
+        private void PostOrden(DataGridView Dgv, clsNodos R)
+        {
+            if (R == null) return;
+
+            if (R.Izquierdo != null)
+            {
+                PostOrden(Dgv, R.Izquierdo);
+
+            }
+            if (R.Derecho != null)
+            {
+                PostOrden(Dgv, R.Derecho);
+            }
+            Dgv.Rows.Add(R.Cod, R.Nom, R.Tra);
+        }
+}
 }
