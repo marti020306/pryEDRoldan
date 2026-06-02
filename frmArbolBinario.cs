@@ -19,7 +19,58 @@ namespace pryEDRoldan
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            if (radIN.Checked)
+            {
+                objArbol.Recorrer(dgvGrilla);
+            }   
+        }
+        clsArbol objArbol = new clsArbol();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodos Persona = new clsNodos();
+            Persona.Cod = Convert.ToInt32(txtCodigo.Text);
+            Persona.Nom = txtNombre.Text;
+            Persona.Tra = txtTramite.Text;
 
+            //Pasar el nodo al metodoAgregar
+            objArbol.Agregar(Persona);
+
+            //Grilla
+            objArbol.Recorrer(dgvGrilla);
+
+            //Arbol
+            objArbol.Recorrer(treArbol);
+
+            //ComboBox
+            objArbol.Recorrer(cmbCodigo);
+
+            //Vector
+            int[] vec = new int[10];
+            objArbol.Recorrer(vec);
+
+
+            //Limpiar
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+            txtCodigo.Focus();
+
+        }
+
+        private void radPRE_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radPRE.Checked)
+            {
+                objArbol.RecorrerPreOrden(dgvGrilla);
+            }
+        }
+
+        private void radPost_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radPost.Checked)
+            {
+                objArbol.RecorrerPostOrden(dgvGrilla);
+            }
         }
     }
 }
