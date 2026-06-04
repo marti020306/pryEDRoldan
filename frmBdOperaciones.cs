@@ -28,9 +28,14 @@ namespace pryEDRoldan
         //Proyeccion Multiple REVISAR
         private void cmdProyMulti_Click(object sender, EventArgs e)
         {
-            objClaseDatos.Listar(dgvBaseDatos,
-                "SELECT CodigoLibro, Titulo FROM Libro");
+            String varSQL = "SELECT Titulo " +
+                 "FROM Libro " +
+                 "ORDER BY 1 DESC ";
+            objClaseDatos.Listar(dgvBaseDatos, varSQL);
         }
+
+
+           
 
         //Join
         private void cmdJuntar_Click(object sender, EventArgs e)
