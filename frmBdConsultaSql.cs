@@ -16,5 +16,17 @@ namespace pryEDRoldan
         {
             InitializeComponent();
         }
+        clsBaseDatos objBaseDatos = new clsBaseDatos();
+        private void cmdListar_Click(object sender, EventArgs e)
+        {
+            if (txtConsulta.Text != "")
+            {
+                objBaseDatos.Listar(dgvConsultaSQL, txtConsulta.Text);
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una consulta SQL");
+            }
+        }
     }
 }

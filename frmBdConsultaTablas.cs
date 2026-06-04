@@ -16,5 +16,17 @@ namespace pryEDRoldan
         {
             InitializeComponent();
         }
+        clsBaseDatos objBaseDatos = new clsBaseDatos();
+        private void cmdListar_Click(object sender, EventArgs e)
+        {
+            if (cbTablas.SelectedIndex != -1)
+            {
+                objBaseDatos.Listar(cbTablas.Text, dgvConsultaTabla);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una tabla");
+            }
+        }
     }
 }

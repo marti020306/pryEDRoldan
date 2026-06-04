@@ -94,5 +94,34 @@ namespace pryEDRoldan
             frmArbolBinario frmArbol = new frmArbolBinario();
             frmArbol.ShowDialog();
         }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo frmGrafo = new frmGrafo();
+            frmGrafo.ShowDialog();
+        }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaTablas frmTabla = new frmBdConsultaTablas();
+            frmTabla.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaSql frmBdConsultaSql = new frmBdConsultaSql();
+            frmBdConsultaSql.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdOperaciones frmBdOperaciones = new frmBdOperaciones();
+            frmBdOperaciones.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -16,5 +16,38 @@ namespace pryEDRoldan
         {
             InitializeComponent();
         }
+        clsBaseDatos objClaseDatos = new clsBaseDatos();
+
+        //Proyeccion Simple
+        private void cmdProySimple_Click(object sender, EventArgs e)
+        {
+            objClaseDatos.Listar(dgvBaseDatos,
+               "SELECT Titulo FROM Libro");
+        }
+
+        //Proyeccion Multiple REVISAR
+        private void cmdProyMulti_Click(object sender, EventArgs e)
+        {
+            objClaseDatos.Listar(dgvBaseDatos,
+                "SELECT CodigoLibro, Titulo FROM Libro");
+        }
+
+        //Join
+        private void cmdJuntar_Click(object sender, EventArgs e)
+        {
+            objClaseDatos.Listar(dgvBaseDatos,
+               "SELECT * FROM Libro WHERE CodigoLibro = 1");
+        }
+
+        private void cmdSelecSimple_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+      
+
+
+
     }
 }
