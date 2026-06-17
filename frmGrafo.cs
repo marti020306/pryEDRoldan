@@ -44,6 +44,9 @@ namespace pryEDRoldan
 
             txtPrecio.Clear();
             txtPrecio.Focus();
+
+            
+
         }
 
         private void frmGrafo_Load(object sender, EventArgs e)

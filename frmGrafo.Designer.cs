@@ -351,10 +351,10 @@
             // cmdVerTodo
             // 
             this.cmdVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVerTodo.Location = new System.Drawing.Point(811, 30);
+            this.cmdVerTodo.Location = new System.Drawing.Point(791, 25);
             this.cmdVerTodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdVerTodo.Name = "cmdVerTodo";
-            this.cmdVerTodo.Size = new System.Drawing.Size(163, 26);
+            this.cmdVerTodo.Size = new System.Drawing.Size(208, 39);
             this.cmdVerTodo.TabIndex = 8;
             this.cmdVerTodo.Text = "Ver todos los viajes";
             this.cmdVerTodo.UseVisualStyleBackColor = true;
