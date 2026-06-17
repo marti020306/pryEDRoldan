@@ -28,5 +28,10 @@ namespace pryEDRoldan
                 MessageBox.Show("Ingrese una consulta SQL");
             }
         }
+
+        private void frmBdConsultaSql_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
