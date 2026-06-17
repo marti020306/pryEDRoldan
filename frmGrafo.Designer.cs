@@ -99,6 +99,7 @@
             this.cmdConsultar.TabIndex = 6;
             this.cmdConsultar.Text = "Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
             // cmdBorrarTodo
             // 
@@ -110,6 +111,7 @@
             this.cmdBorrarTodo.TabIndex = 6;
             this.cmdBorrarTodo.Text = "Borrar Todo";
             this.cmdBorrarTodo.UseVisualStyleBackColor = true;
+            this.cmdBorrarTodo.Click += new System.EventHandler(this.cmdBorrarTodo_Click);
             // 
             // txtPrecio2
             // 
@@ -196,6 +198,7 @@
             this.cmdBorrar.TabIndex = 7;
             this.cmdBorrar.Text = "Borrar todo";
             this.cmdBorrar.UseVisualStyleBackColor = true;
+            this.cmdBorrar.Click += new System.EventHandler(this.cmdBorrar_Click);
             // 
             // cmdCargar
             // 
@@ -355,6 +358,7 @@
             this.cmdVerTodo.TabIndex = 8;
             this.cmdVerTodo.Text = "Ver todos los viajes";
             this.cmdVerTodo.UseVisualStyleBackColor = true;
+            this.cmdVerTodo.Click += new System.EventHandler(this.cmdVerTodo_Click);
             // 
             // cmdListarOrigenes
             // 
@@ -377,6 +381,7 @@
             this.cmdListarDestinos.TabIndex = 6;
             this.cmdListarDestinos.Text = "Listar Destinos";
             this.cmdListarDestinos.UseVisualStyleBackColor = true;
+            this.cmdListarDestinos.Click += new System.EventHandler(this.cmdListarDestinos_Click);
             // 
             // cbHasta
             // 
@@ -438,6 +443,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmGrafo";
             this.Text = "Operaciones en un grafo";
+            this.Load += new System.EventHandler(this.frmGrafo_Load);
             this.gbConsulta.ResumeLayout(false);
             this.gbConsulta.PerformLayout();
             this.gbCargaDatos.ResumeLayout(false);

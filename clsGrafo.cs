@@ -41,11 +41,14 @@ namespace pryEDRoldan
             Grilla.Columns.Add("Col2", "Precio");
             Grilla.Columns[0].Width = 200;
             Grilla.Columns[1].Width = 200;
-            for (Int32 c = 0; c < 5; c++)
+
+            if (f < 0 || f >= Ciudades.Length) return;
+
+            for (Int32 c = 0; c < Ciudades.Length; c++)
             {
                 if (Precio[f, c] > 0)
                 {
-                    Grilla.Rows.Add(Ciudades[f], Precio[f, c]);
+                    Grilla.Rows.Add(Ciudades[c], Precio[f, c]);
                 }
             }
         }
@@ -54,31 +57,35 @@ namespace pryEDRoldan
         {
             Grilla.Rows.Clear();
             Grilla.Columns.Clear();
-            Grilla.Columns.Clear();
-            for (Int32 i = 0; i < 5; i++)
+
+                Grilla.Columns.Add("Origen", "Origen");
+            for (Int32 i = 0; i < Ciudades.Length; i++)
             {
                 Grilla.Columns.Add("Destino" + i.ToString(), Ciudades[i]);
-
             }
-            for (Int32 f = 0; f < 5; f++)
+
+            for (Int32 f = 0; f < Ciudades.Length; f++)
             {
-                Grilla.Rows.Add(Ciudades[f]);
-                for (Int32 c = 0; c < 5; c++)
+                Int32 rowIndex = Grilla.Rows.Add();
+                Grilla.Rows[rowIndex].Cells[0].Value = Ciudades[f];
+                for (Int32 c = 0; c < Ciudades.Length; c++)
                 {
-                    Grilla.Rows[f].Cells[c + 1].Value = Precio[f, c];
+                    Grilla.Rows[rowIndex].Cells[c + 1].Value = Precio[f, c];
                 }
             }
-
         }
+
         public void MostrarCiudades(ComboBox cmb)
         {
             cmb.Items.Clear();
-            for (Int32 i = 0; i < 5; i++)
+            for (Int32 i = 0; i < Ciudades.Length; i++)
             {
                 cmb.Items.Add(Ciudades[i]);
             }
-            cmb.SelectedIndex = 0;
-
+            if (cmb.Items.Count > 0)
+            {
+                cmb.SelectedIndex = 0;
+            }
         }
 
         public void BorrarTodo() 

@@ -72,5 +72,35 @@ namespace pryEDRoldan
                 objArbol.RecorrerPostOrden(dgvGrilla);
             }
         }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            objArbol.Equilibrar();
+
+            objArbol.Recorrer(dgvGrilla);
+            objArbol.Recorrer(treArbol);
+            objArbol.Recorrer(cmbCodigo);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbCodigo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un código");
+                return;
+            }
+
+            int codigo = Convert.ToInt32(cmbCodigo.Text);
+
+            objArbol.Eliminar(codigo);
+
+            dgvGrilla.Rows.Clear();
+            cmbCodigo.Items.Clear();
+            treArbol.Nodes.Clear();
+
+            objArbol.Recorrer(dgvGrilla);
+            objArbol.Recorrer(cmbCodigo);
+            objArbol.Recorrer(treArbol);
+        }
     }
 }

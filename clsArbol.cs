@@ -78,7 +78,7 @@ namespace pryEDRoldan
             }
         }
 
-        
+
         private void InOrdenAsc(ComboBox Lst, clsNodos R)
         {
             if (R == null) return;
@@ -146,7 +146,7 @@ namespace pryEDRoldan
 
         //mostrar en el TreeView/Arbol
 
-        private void PreOrden(clsNodos R, TreeNode nodoTreeView) 
+        private void PreOrden(clsNodos R, TreeNode nodoTreeView)
         {
             if (R == null) return;
 
@@ -164,7 +164,7 @@ namespace pryEDRoldan
 
         }
 
-        public void Recorrer(TreeView tree) 
+        public void Recorrer(TreeView tree)
         {
             tree.Nodes.Clear();
             if (Raiz == null) return;
@@ -179,16 +179,16 @@ namespace pryEDRoldan
 
         public void Recorrer(ComboBox Lista)
         {
-           Lista.Items.Clear();
-           if (Raiz == null) return;
+            Lista.Items.Clear();
+            if (Raiz == null) return;
             InOrdenAsc(Lista, Raiz);
         }
 
 
         //Sobrecarga a un vector
 
-        private void InOrdenAsc(int[] Vec, clsNodos R, ref int i) 
-        { 
+        private void InOrdenAsc(int[] Vec, clsNodos R, ref int i)
+        {
             //ref: Evita que se pisen los datos, compartiendo el mismo i e incrementandolo
 
             if (R == null) return;
@@ -197,7 +197,7 @@ namespace pryEDRoldan
             {
                 InOrdenAsc(Vec, R.Izquierdo, ref i);
             }
-            Vec[i] = R.Cod; 
+            Vec[i] = R.Cod;
             i++;
             if (R.Derecho != null)
             {
@@ -205,12 +205,105 @@ namespace pryEDRoldan
             }
         }
 
-        public void Recorrer(int[] Vector) 
+        public void Recorrer(int[] Vector)
         {
             int indice = 0;
             if (Raiz == null) return;
             InOrdenAsc(Vector, Raiz, ref indice);
         }
+
+        public void Vaciar()
+        {
+            Raiz = null;
+        }
+
+
+        private void Equilibrar(int[] vec, int inicio, int fin)
+        {
+            if (inicio > fin) return;
+
+            int medio = (inicio + fin) / 2;
+
+            clsNodos nodo = new clsNodos();
+            nodo.Cod = vec[medio];
+            nodo.Nom = "";
+            nodo.Tra = "";
+
+            Agregar(nodo);
+
+            Equilibrar(vec, inicio, medio - 1);
+            Equilibrar(vec, medio + 1, fin);
+        }
+
+        public void Equilibrar()
+        {
+            int[] vec = new int[100];
+
+            Recorrer(vec);
+
+            int cantidad = 0;
+
+            for (int i = 0; i < vec.Length; i++)
+            {
+                if (vec[i] != 0)
+                    cantidad++;
+            }
+
+            Vaciar();
+
+            Equilibrar(vec, 0, cantidad - 1);
+        }
+
+        private clsNodos EliminarNodo(clsNodos raiz, int codigo)
+        {
+            if (raiz == null)
+                return null;
+
+            if (codigo < raiz.Cod)
+            {
+                raiz.Izquierdo = EliminarNodo(raiz.Izquierdo, codigo);
+            }
+            else if (codigo > raiz.Cod)
+            {
+                raiz.Derecho = EliminarNodo(raiz.Derecho, codigo);
+            }
+            else
+            {
+                if (raiz.Izquierdo == null)
+                    return raiz.Derecho;
+
+                if (raiz.Derecho == null)
+                    return raiz.Izquierdo;
+
+                clsNodos aux = Menor(raiz.Derecho);
+
+                raiz.Cod = aux.Cod;
+                raiz.Nom = aux.Nom;
+                raiz.Tra = aux.Tra;
+
+                raiz.Derecho = EliminarNodo(raiz.Derecho, aux.Cod);
+            }
+
+            return raiz;
+        }
+
+        private clsNodos Menor(clsNodos nodo)
+        {
+            while (nodo.Izquierdo != null)
+                nodo = nodo.Izquierdo;
+
+            return nodo;
+        }
+
+        public void Eliminar(int codigo)
+        {
+            Raiz = EliminarNodo(Raiz, codigo);
+        }
+
+
+
+
+
 
     }   
 }
