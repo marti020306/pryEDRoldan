@@ -24,32 +24,31 @@ namespace pryEDRoldan
             if (pri == null)
             {
                 pri = nuevo;
+                nuevo.Sig = null;
+                return;
             }
-            else
-            {
-                if (nuevo.Cod <= pri.Cod)
-                {
-                    nuevo.Sig = pri;
-                    pri = nuevo;
-                }
-                else
-                {
-                    clsNodos aux = pri;
-                    clsNodos ant = pri;
 
-                    while (aux.Cod < nuevo.Cod)
-                    {
-                        aux = aux;
-                        aux = aux.Sig;
-                        if (aux == null)
-                        {
-                            break;
-                        }
-                    }
-                    nuevo.Sig = aux;
-                    aux.Sig = nuevo;
-                }
+            // insertar al inicio si corresponde
+            if (nuevo.Cod <= pri.Cod)
+            {
+                nuevo.Sig = pri;
+                pri = nuevo;
+                return;
             }
+
+            // buscar posición correcta manteniendo 'ant' como nodo anterior
+            clsNodos ant = pri;
+            clsNodos aux = pri.Sig;
+
+            while (aux != null && aux.Cod < nuevo.Cod)
+            {
+                ant = aux;
+                aux = aux.Sig;
+            }
+
+            // insertar entre ant y aux (aux puede ser null si es al final)
+            ant.Sig = nuevo;
+            nuevo.Sig = aux;
         }
         public void Recorrer(ListBox Lista)
         {

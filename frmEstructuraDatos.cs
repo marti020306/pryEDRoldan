@@ -121,7 +121,8 @@ namespace pryEDRoldan
 
         private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmRepasoBD frmRepasoBD = new frmRepasoBD();
+            frmRepasoBD.ShowDialog();
         }
     }
 }

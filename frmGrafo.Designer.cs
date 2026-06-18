@@ -196,7 +196,7 @@
             this.cmdBorrar.Name = "cmdBorrar";
             this.cmdBorrar.Size = new System.Drawing.Size(119, 39);
             this.cmdBorrar.TabIndex = 7;
-            this.cmdBorrar.Text = "Borrar todo";
+            this.cmdBorrar.Text = "Borrar ";
             this.cmdBorrar.UseVisualStyleBackColor = true;
             this.cmdBorrar.Click += new System.EventHandler(this.cmdBorrar_Click);
             // 
@@ -370,6 +370,7 @@
             this.cmdListarOrigenes.TabIndex = 7;
             this.cmdListarOrigenes.Text = "Listar Origenes";
             this.cmdListarOrigenes.UseVisualStyleBackColor = true;
+            this.cmdListarOrigenes.Click += new System.EventHandler(this.cmdListarOrigenes_Click);
             // 
             // cmdListarDestinos
             // 
@@ -442,6 +443,7 @@
             this.Controls.Add(this.gbCargaDatos);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmGrafo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Operaciones en un grafo";
             this.Load += new System.EventHandler(this.frmGrafo_Load);
             this.gbConsulta.ResumeLayout(false);

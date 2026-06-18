@@ -1,4 +1,5 @@
-﻿using System;
+csharp frmGrafo.cs
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -73,7 +74,25 @@ namespace pryEDRoldan
             decimal precio = objGrafo.Consultar(fila, columna);
 
             if (precio > 0)
+            {
                 txtPrecio2.Text = precio.ToString();
+
+                // Obtener nombres de origen y destino (si no hay SelectedItem usar Text)
+                string origen = cbOrigen2.SelectedItem != null ? cbOrigen2.SelectedItem.ToString() : cbOrigen2.Text;
+                string destino = cbDestino2.SelectedItem != null ? cbDestino2.SelectedItem.ToString() : cbDestino2.Text;
+
+                // Asegurar que la grilla tenga las columnas esperadas antes de agregar filas
+                if (dgvProvincias.Columns["Origen"] == null)
+                {
+                    dgvProvincias.Columns.Clear();
+                    dgvProvincias.Columns.Add("Origen", "Origen");
+                    dgvProvincias.Columns.Add("Destino", "Destino");
+                    dgvProvincias.Columns.Add("Precio", "Precio");
+                }
+
+                // Agregar la fila con origen, destino y precio formateado
+                dgvProvincias.Rows.Add(origen, destino, precio.ToString("F2"));
+            }
             else
                 MessageBox.Show("No existe un viaje cargado");
         }

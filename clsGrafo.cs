@@ -101,6 +101,30 @@ namespace pryEDRoldan
         }
 
 
+        public void MostrarOrigenes(Int32 destino, DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            Grilla.Columns.Clear();
+
+            Grilla.Columns.Add("Col1", "Origen");
+            Grilla.Columns.Add("Col2", "Precio");
+
+            Grilla.Columns[0].Width = 200;
+            Grilla.Columns[1].Width = 200;
+
+            if (destino < 0 || destino >= Ciudades.Length) return;
+
+            for (Int32 f = 0; f < Ciudades.Length; f++)
+            {
+                if (Precio[f, destino] > 0)
+                {
+                    Grilla.Rows.Add(Ciudades[f], Precio[f, destino]);
+                }
+            }
+        }
+
+
+
 
     }
 }

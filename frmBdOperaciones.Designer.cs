@@ -212,6 +212,7 @@
             this.Controls.Add(this.dgvBaseDatos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBdOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBdOperaciones";
             this.Load += new System.EventHandler(this.frmBdOperaciones_Load);
             this.gbAlgebraicas.ResumeLayout(false);

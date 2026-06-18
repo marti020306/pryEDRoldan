@@ -38,10 +38,10 @@
             // cmdListar
             // 
             this.cmdListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListar.Location = new System.Drawing.Point(380, 382);
-            this.cmdListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdListar.Location = new System.Drawing.Point(507, 470);
+            this.cmdListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(106, 32);
+            this.cmdListar.Size = new System.Drawing.Size(141, 39);
             this.cmdListar.TabIndex = 7;
             this.cmdListar.Text = "Listar";
             this.cmdListar.UseVisualStyleBackColor = true;
@@ -57,45 +57,45 @@
             "Idioma",
             "Libro",
             "Pais"});
-            this.cbTablas.Location = new System.Drawing.Point(206, 387);
-            this.cbTablas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTablas.Location = new System.Drawing.Point(275, 476);
+            this.cbTablas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTablas.Name = "cbTablas";
-            this.cbTablas.Size = new System.Drawing.Size(154, 23);
+            this.cbTablas.Size = new System.Drawing.Size(204, 26);
             this.cbTablas.TabIndex = 6;
             // 
             // lblTabla
             // 
             this.lblTabla.AutoSize = true;
             this.lblTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTabla.Location = new System.Drawing.Point(44, 390);
-            this.lblTabla.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTabla.Location = new System.Drawing.Point(59, 480);
             this.lblTabla.Name = "lblTabla";
-            this.lblTabla.Size = new System.Drawing.Size(151, 15);
+            this.lblTabla.Size = new System.Drawing.Size(180, 18);
             this.lblTabla.TabIndex = 5;
             this.lblTabla.Text = "Tabla de la base de datos:";
             // 
             // dgvConsultaTabla
             // 
             this.dgvConsultaTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultaTabla.Location = new System.Drawing.Point(26, 41);
-            this.dgvConsultaTabla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvConsultaTabla.Location = new System.Drawing.Point(35, 50);
+            this.dgvConsultaTabla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvConsultaTabla.Name = "dgvConsultaTabla";
             this.dgvConsultaTabla.RowHeadersWidth = 51;
             this.dgvConsultaTabla.RowTemplate.Height = 24;
-            this.dgvConsultaTabla.Size = new System.Drawing.Size(645, 320);
+            this.dgvConsultaTabla.Size = new System.Drawing.Size(860, 394);
             this.dgvConsultaTabla.TabIndex = 4;
             // 
             // frmBdConsultaTablas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 454);
+            this.ClientSize = new System.Drawing.Size(929, 559);
             this.Controls.Add(this.cmdListar);
             this.Controls.Add(this.cbTablas);
             this.Controls.Add(this.lblTabla);
             this.Controls.Add(this.dgvConsultaTabla);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBdConsultaTablas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de una Tabla";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaTabla)).EndInit();
             this.ResumeLayout(false);

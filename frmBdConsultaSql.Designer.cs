@@ -101,6 +101,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBdConsultaSql";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas en la Base De Datos";
             this.Load += new System.EventHandler(this.frmBdConsultaSql_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaSQL)).EndInit();
